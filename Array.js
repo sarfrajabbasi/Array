@@ -16,9 +16,7 @@
 
 let Phone = ['Oneplus', 'Realme']
 
-// console.log(Phone.length)
-// 2
-
+console.log(Phone.length)//2
 
 
 
@@ -27,19 +25,17 @@ let Phone = ['Oneplus', 'Realme']
 
 
 let first = Phone[0]
-// console.log(first)
-// Oneplus
+console.log(first)// Oneplus
 
 let last = Phone[Phone.length - 1]
-// console.log(last);
-// Realme
+console.log(last);// Realme
 
 
 
 // Loop over an Array
 
 Phone.forEach(function(Value, i, array) {
-  // console.log(Value, i, array)
+  console.log(Value, i, array)
 })
 // Oneplus 0
 // Realme 1
@@ -49,8 +45,7 @@ Phone.forEach(function(Value, i, array) {
 // Add an Value to the end of an Array
 
 let newLength = Phone.push('Vivo')
-// console.log(newLength)
-// ["Oneplus", "Realme", "Vivo"]
+console.log(newLength)// ["Oneplus", "Realme", "Vivo"]
 
 
 
@@ -81,8 +76,7 @@ let newLength1 = Phone.unshift('samsung') // add to the front
 Phone.push('MI MAx')
 // ["Samsung", "Realme", "MI MAx"]
 
-let pos1 = Phone.indexOf('Realme')
-// 1
+let pos1 = Phone.indexOf('Realme')// 1
 
 
 
@@ -100,8 +94,7 @@ let removedItem = Phone.splice(pos1, 1) // this is how to remove an Value
 // Remove items from an i position
 
 let country = ['America', 'Ukraine', 'Russia', 'UK']
-// console.log(country)
-// ["America", "Ukraine", "Russia", "UK"]
+console.log(country)// ["America", "Ukraine", "Russia", "UK"]
 
 let pos = 1
 let n = 2
@@ -111,18 +104,15 @@ let removedItems = country.splice(pos, n)
 
 // starting at the i position specified by pos and progressing toward the end of array.
 
-// console.log(country)
-// ["America", "UK"] (the original array is changed)
+console.log(country)// ["America", "UK"] (the original array is changed)
 
-// console.log(removedItems)
-// ["Ukraine", "Russia"]
+console.log(removedItems)// ["Ukraine", "Russia"]
 
 
 
 // Copy an Array
 let shallowCopy = Phone.slice() // this is how to make a copy
-// console.log(Phone)
-// ["Samsung", "MI MAx"]
+console.log(Phone)// ["Samsung", "MI MAx"]
 
 
 // Accessing Array Elements:-----
@@ -195,8 +185,7 @@ fruits.length = 10
 console.log(fruits)// ['Coka-cola', 'apple', 'peach', empty x 2, 'Fruitbeer', empty x 4]
 console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
 console.log(fruits.length)       // 10
-console.log(fruits[8])   
-        // undefined
+console.log(fruits[8])// undefined
 
 
 
@@ -204,8 +193,7 @@ console.log(fruits[8])
 
 fruits.length = 2
 console.log(Object.keys(fruits)) // ['0', '1']
-console.log(fruits.length)    
-   // 2
+console.log(fruits.length)// 2
 
 
 // This is explained further on the Array.length page.
@@ -244,7 +232,7 @@ msgArray[0] = 'Holaaa'
 msgArray[99] = 'Universe'
 
 if (msgArray.length === 100) {
-  // console.log('The length is 100.')
+  console.log('The length is 100.')
 }
 
 
@@ -266,7 +254,7 @@ let board = [
   ['p','p','p','p','p','p','p','p'],
   ['r','n','b','q','k','b','n','r'] ]
 
-// console.log(board.join('\n') + '\n\n')
+console.log(board.join('\n') + '\n\n')
 
 
 
@@ -275,12 +263,9 @@ let board = [
 // Move King's Pawn forward 2
 board[4][5] = board[6][5]
 board[6][5] = ' '
-// console.log(board.join('\n'))
+console.log(board.join('\n'))
 
-
-
-
-// Here is the output:
+// output:
 
 // R,N,B,Q,K,B,N,R
 // P,P,P,P,P,P,P,P
@@ -310,11 +295,9 @@ for (let x = 0; x < 10; x++){
   2 * x ** 2
  ])
 }
-// console.table(values)
+console.table(values)
 
-
-
-// Results in
+// Results (output)
 
 // The first column is the index
 // 0	1	0
