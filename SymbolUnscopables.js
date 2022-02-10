@@ -1,3 +1,4 @@
+//
 var keys = [];
 with (Array.prototype){
   keys.push('something');
