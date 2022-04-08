@@ -1,24 +1,24 @@
-// Array.from
+//---------- Array.from---------
 
 // The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
 
 
 
-// SYNTAX
+// ------SYNTAX---------
 
-//  Arrow function
+//  --------Arrow function--------
 
 // Array.from(arrayLike, (element) => { /* ... */ } )
 // Array.from(arrayLike, (element, index) => { /* ... */ } )
 
 
-//  Mapping function
+//  -------Mapping function---------
 
 // Array.from(arrayLike, mapFn)
 // Array.from(arrayLike, mapFn, thisArg)
 
 
-// Inline mapping function
+// --------Inline mapping function----------
 
 // Array.from(arrayLike, function mapFn(element) { /* ... */ })
 // Array.from(arrayLike, function mapFn(element, index) { /* ... */ })
@@ -28,23 +28,26 @@
 
 
 
-// Parameters
+// -------Parameters----------
 
-// arrayLike:-
+// ---arrayLike:-
 // An array-like or iterable object to convert to an array.
 
-// mapFn Optional:-
+// -------mapFn Optional:-
 // Map function to call on every element of the array.
 
-// thisArg Optional:-
+// -----thisArg Optional:-
 // Value to use as this when executing mapFn.
 
 
-// Return value:-
+// -----Return value:-------
 
 // A new Array instance.
 
-// Array.from() lets you create Arrays from:
+
+
+
+// ---------Array.from() lets you create Arrays from:--------
 
 // array-like objects (objects with a length property and indexed elements); or
 // iterable objects (objects such as Map and Set).
@@ -125,7 +128,7 @@ function f(){
 }
 f(1,2,3);
 
-// output
+// ------output-------
 
 // [1,2,3]
 
@@ -140,7 +143,7 @@ f(1,2,3);
 console.log(Array.from([1, 2, 3], x => x + x));
 
 
-// output
+// -----output-------
 
 // [2, 4, 6]
 
@@ -153,7 +156,7 @@ console.log(Array.from([1, 2, 3], x => x + x));
 
 console.log(Array.from({length: 5}, (v, i) => i));
 
-// output
+// ------output----------
 
 // [0, 1, 2, 3, 4]
 
@@ -161,7 +164,7 @@ console.log(Array.from({length: 5}, (v, i) => i));
 
 
 
-// SEQUENCE GENERATOR (RANGE)
+// -------SEQUENCE GENERATOR (RANGE)--------
 
 
 // Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
@@ -176,7 +179,7 @@ console.log(range(0, 4, 1));
 
 
 
-// output
+// -------output---------
 
 // [0, 1, 2, 3, 4]
 
@@ -186,7 +189,7 @@ console.log(range(1, 10, 2));
 
 
 
-// output
+// --------output-----------
 
 // [1, 3, 5, 7, 9]
 
@@ -200,7 +203,7 @@ console.log(range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromC
 
 
 
-// output
+//------------- output----------------
 
 
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]

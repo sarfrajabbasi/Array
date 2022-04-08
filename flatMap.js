@@ -1,20 +1,20 @@
-// Array.prototype.flatMap
+// --------Array.prototype.flatMap--------
 
 // The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a map() followed by a flat() of depth 1, but slightly more efficient than calling those two methods separately.
 
 
-// Syntax
+//------Syntax--------
 
-// // Arrow function
+// // ------Arrow function---------
 // flatMap((currentValue) => { /* ... */ } )
 // flatMap((currentValue, index) => { /* ... */ } )
 // flatMap((currentValue, index, array) => { /* ... */ } )
 
-// // Callback function
+// // -----------Callback function-------------
 // flatMap(callbackFn)
 // flatMap(callbackFn, thisArg)
 
-// // Inline callback function
+// //------------- Inline callback function----------
 // flatMap(function(currentValue) { /* ... */ })
 // flatMap(function(currentValue, index) { /* ... */ })
 // flatMap(function(currentValue, index, array){ /* ... */ })
@@ -23,7 +23,7 @@
 
 
 
-// Parameters
+// -----------Parameters------------
 
 // callbackFn
 // Function that produces an element of the new Array, taking three arguments:
@@ -42,13 +42,14 @@
 
 
 
-// Return value
+// ---------Return value--------
+
 // A new array with each element being the result of the callback function and flattened to a depth of 1.
 
 
 
-// Alternative
-// Pre-allocate and explicitly iterate
+//------------ Alternative-------------
+//---------- Pre-allocate and explicitly iterate----------
 
 var arr = [1,2,3,4];
 
@@ -65,8 +66,9 @@ console.log(acc)// [1, 2, 2, 4, 3, 6, 4, 8]
 
 
 
-// Examples
-// map() and flatMap()
+//-------------- Examples--------------
+
+// ---------map() and flatMap()--------------
 
 let arr1 = [1,2,3,4];
 
@@ -90,7 +92,7 @@ console.log(arr2.flatMap(x => x.split(" ")));//["it's","Sunny","in", "", "Califo
 
 
 
-// For adding and removing items during a map()
+// -------------For adding and removing items during a map()-----------
 
 // flatMap can be used as a way to add and remove items (modify the number of items) during a map. In other words, it allows you to map many items to many items (by handling each input item separately), rather than always one-to-one. In this sense, it works like the opposite of filter. Return a 1-element array to keep the item, a multiple-element array to add items, or a 0-element array to remove the item.
 
@@ -105,6 +107,6 @@ let a = [5,4,-3,20,17,-33,-4,18];
 console.log(a.flatMap((n)=> (n<0)? []:(n % 2==0)?[n]:[n-1,'yes']));
 
 
-// output
+// --------output------------
 
 //[4, 'yes', 4, 20, 16, 'yes', 18]

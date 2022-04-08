@@ -1,17 +1,17 @@
-// Array.prototype.flat
+// -----------------Array.prototype.flat----------------
 
 // The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
 
 
-// Syntax
+// -----------------Syntax--------------------
 
 // flat()
 // flat(depth)
 
 
 
-// Parameters
+// ---------------Parameters----------------------
 
 // depth Optional
 // The depth level specifying how deep a nested array structure should be flattened. Defaults to 1.
@@ -22,9 +22,9 @@
 
 
 
-// Alternatives
+// --------------Alternatives-------------
 
-// reduce and concat
+// ----------------reduce and concat-------------------
 
 const arr = [1,2,3,[4,5]];
 console.log(arr.flat());//[1, 2, 3, 4, 5]
@@ -38,7 +38,7 @@ console.log(flattend)
 
 
 
-// reduce + concat + isArray + recursivity
+// -----------reduce + concat + isArray + recursivity-----------------
 
 const ar =[1,2,[3,4,[5,6]]];
 function flatDeep(ar,d=1){
@@ -52,7 +52,7 @@ console.log(flatDeep(ar,Infinity))// [1, 2, 3, 4, 5, 6]
 
 
 
-// Use a stack
+// -------------Use a stack----------------
 
 // non recursive flatten deep using a stack
 // note that depth control is hard/inefficient as we will need to tag EACH value with its own depth
@@ -75,13 +75,13 @@ function flatten(input) {
   }
   
   const arrayy = [1, 2, [3, 4, [5, 6]]];
-  onsole.log(flatten(arrayy));
+  console.log(flatten(arrayy));
   // [1, 2, 3, 4, 5, 6]
 
 
 
 
-// Use Generator function
+// -------------Use Generator function-----------------
 
 function* flatten(array,depth){
     if(depth === undefined){
@@ -101,7 +101,7 @@ console.log(flatten1);// [1, 2, 3, 4, 5, 6]
 
 
 
-// Examples
+//----------- Examples---------------
 
 const arr1 = [0, 1, 2, [3, 4]];
 
@@ -109,10 +109,10 @@ console.log(arr1.flat());// expected output: [0, 1, 2, 3, 4]
 
 const array = [0, 1, 2, [[[3, 4]]]];
 
-console.log(array.flat(2));// expected output: [0, 1, 2, [3, 4]]
+console.log(array.flat(4));// expected output: [0, 1, 2, [3, 4]]
 
 
-// Flattening nested arrays
+// -----------Flattening nested arrays------------
 
 const arr4 =[1,2,[3,4]];
 
@@ -131,7 +131,7 @@ console.log(arr41.flat(Infinity));
 
 
 
-// Flattening and array holes
+// ----------Flattening and array holes----------------
 
 const arr51 = [1,2,,4,5];
 

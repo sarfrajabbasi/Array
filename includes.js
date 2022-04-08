@@ -1,34 +1,36 @@
-// Array.prototype.includes
+// -------Array.prototype.includes-------
 
 // The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
 
 
-// SYNTAX
+// -------SYNTAX---------
 
 // includes(searchElement)
 // includes(searchElement, fromIndex)
 
 
 
-// PARAMETERS
+//---------PARAMETERS---------
 
-// searchElement
+
+// --searchElement--------
 
 // The value to search for.
 
 // NOTE: When comparing strings and characters, includes() is case-sensitive.
 
-// fromIndex Optional
+
+//--fromIndex Optional--------
 
 // The position in this array at which to begin searching for searchElement.
 
-// The first element to be searched is found at fromIndex for positive values of fromIndex, or at arr.length + fromIndex for negative values of fromIndex (using the absolute value of fromIndex as the number of elements from the end of the array at which to start the search).
+// The first element to be searched is found at fromIndex for positive values of fromIndex, or at "arr.length + fromIndex" for negative values of fromIndex (using the absolute value of fromIndex as the number of elements from the end of the array at which to start the search).
 
 // Defaults to 0.
 
 
 
-// Return Value
+// -------Return Value------
 
 // A boolean value which is true if the value searchElement is found within the array (or the part of the array indicated by the index fromIndex, if specified).
 
@@ -37,7 +39,7 @@
 // NOTE: Technically speaking, includes() uses the sameValueZero algorithm to determine whether the given element is found.
 
 
-// EXAMPLES:-
+// EXAMPLES:-----
 
 const array1 = [1, 2, 3];
 
@@ -61,16 +63,17 @@ console.log([1, 2, NaN].includes(NaN))
 console.log(["1", "2", "3"].includes(3))
 
 
-// OUTPUT
+// -----OUTPUT--------
 
-// true
-// False
 // False
 // true
 // False
+// true
+// true
+// False
 
 
-// FromIndex is greater than or equal to the array length
+// -----------FromIndex is greater than or equal to the array length------------
 
 // If fromIndex is greater than or equal to the length of the array, false is returned. The array will not be searched.
 
@@ -80,12 +83,14 @@ console.log(arr.includes('c', 3))
 console.log(arr.includes('c', 100))  
 
 
-// OUTPUT
+// ------OUTPUT---------
 
 // false
 // false
 
-// COMPUTED index IS LESS THAN 0
+
+
+// ------COMPUTED index IS LESS THAN 0-----
 
 // If fromIndex is negative, the computed index is calculated to be used as a position in the array at which to begin searching for searchElement. If the computed index is less than or equal to 0, the entire array will be searched.
 
@@ -104,7 +109,7 @@ console.log(arr.includes('c', -100))
 console.log(arr.includes('a', -2))   
 
 
-// OUTPUT
+// ----OUTPUT-------
 
 // true
 // true
@@ -113,7 +118,7 @@ console.log(arr.includes('a', -2))
 
 
 
-// includes() used as a generic method
+// -------includes() used as a generic method----------
 
 
 // includes() method is intentionally generic. It does not require this value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects).
@@ -127,7 +132,7 @@ console.log(arr.includes('a', -2))
 })('a','b','c') 
 
 
-// OUTPUT
+// ------OUTPUT---------
 
 // true
 // false
